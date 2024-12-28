@@ -1,9 +1,9 @@
 .footer {
-  border: 5px solid rgb(157, 21, 194);
+  /* border: 5px solid rgb(157, 21, 194); */
   background-color: rgb(12, 53, 96);
   /* margin-top: auto; */
   height: 110px;
-  width: 102%;
+  /* width: 100%; */
   align-self: center;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
