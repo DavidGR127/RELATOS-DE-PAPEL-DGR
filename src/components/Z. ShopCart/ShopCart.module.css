@@ -1,0 +1,68 @@
+.shopCart {
+  /* border: 2px solid rgb(227, 25, 25); */
+  /* color: rgb(186, 205, 16); */
+  /* height: 60px; */
+  /* line-height: 80px; */
+  /* display: contents; */
+  align-items: center;
+  align-content: center;
+}
+
+.shopCart_button {
+  /* border: 2px solid rgb(13, 200, 10); */
+  background-color: rgb(12, 53, 96);
+  /* height: 50px; */
+  /* padding: 0; */
+  display: contents;
+  /* flex-direction: row-reverse; */
+}
+.shopCart_button:hover {
+  background-color: rgb(7, 33, 60);
+}
+
+.shopCart_button_badge {
+  /* background-color: rgb(198, 40, 148); */
+  position: absolute;
+  /* top: 100px; */
+  left: 10px;
+  right: 20px;
+/*   padding: 10px 10px; */
+  /* margin-top: 5px;
+  margin-left: 5px;
+/*   border-radius: 100%; */
+  height: 30px;
+  width: 30px;
+  /* z-index: 200; */
+
+/*   style={{
+    position: "absolute",
+    top: "1px",
+    left: "200px",
+    padding: "5px 10px",
+    fontSize: "14px",
+    fontWeight: "bold",
+    borderRadius: "10px", */
+
+}
+.shopCart_button_badge_text {
+  display: block;
+  font-size: 12px;
+  border-radius: 50%;
+  margin-left: -8px;
+  margin-top: 5px;
+  padding: 0;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  z-index: 200;
+}
+.shopCart_button_icon {
+  /* background-color: rgb(40, 198, 132); */
+  /* position: relative; */
+  /* top: -5px; */
+  font-size: 40px;
+  color: wheat;
+  /* position: center; */
+  align-items: center;
+  /* display: flex; */
+}
