@@ -10,24 +10,11 @@ import Navbar from "react-bootstrap/Navbar";
 import ShopCart from "../Cart/ShopCart";
 import { findBooks } from "../../features/books/booksSlice";
 import styles from "./Header.module.css";
-import imagenSiteLogo from "../../assets/logo-site.png";
-/* import SearchBar from "../SearchBar/SearchBar"; */
+import imagenSiteLogo from "../../assets/images/logo-site.png";
+import { FaRegAddressBook } from "react-icons/fa6";
+import { GrHelpBook } from "react-icons/gr";
 
-/* ---------- PARA QUE SE UTILIZA ??? --------------- */
-/* const NavLinkActive = ({ to, onClick, children }) => (
-  <NavLink
-    onClick={() => onClick(true)}
-    to={to}
-    className={({ isActive }) =>
-      isActive
-        ? `${styles.navbar_nav_link} ${styles.navbar_nav_link_active}`
-        : `${styles.navbar_nav_link}`
-    }
-  >
-    {children}
-  </NavLink>
-); */
-/* ---------- PARA QUE SE UTILIZA ??? --------------- */
+/* import SearchBar from "../SearchBar/SearchBar"; */
 
 const Header = () => {
   const [search, setSearch] = useState("");
@@ -52,8 +39,8 @@ const Header = () => {
           <Form onSubmit={handleSubmit} className={styles.formSearch}>
             <InputGroup>
               <Form.Control
-                placeholder="Buscar por título..."
-                aria-label="Buscar por título..."
+                placeholder="Buscar libros por título..."
+                aria-label="Buscar libros por título..."
                 className={styles.formSearch_txtSearch}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -66,7 +53,12 @@ const Header = () => {
 
           {/*..LINK DE AYUDA...................................*/}
           <Link to="/main/home" className={styles.helpLink}>
-            Ayuda
+            <div>
+              <GrHelpBook
+                style={{ color: "white", width: "100%", fontSize: "20px" }}
+              />
+              <div>Ayuda</div>
+            </div>
           </Link>
 
           {/*..CARRITO DE COMPRA...............................*/}
@@ -74,16 +66,21 @@ const Header = () => {
 
           {/*..INGRESAR A LA PÁGINA...............................*/}
           <Link to="/main/home" className={styles.helpLink}>
-            Ayudas
+            <div>
+              <FaRegAddressBook
+                style={{ color: "white", width: "100%", fontSize: "20px" }}
+              />
+              <div>Acceder</div>
+            </div>
           </Link>
         </div>
       </Row>
       <Row>
         <Navbar
-          expand="lg"
+          /* expand="lg" */
           className={styles.navbar}
-          bg="blue"
-          data-bs-theme="blue"
+          /*           bg="red"
+          data-bs-theme="red" */
         >
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
@@ -117,10 +114,10 @@ const Header = () => {
 
               <Nav.Link
                 as={Link}
-                to="/main/home"
+                to="/main/checkout"
                 className={styles.navbar_nav_link}
               >
-                Nuevas publicaciones
+                Checkout
               </Nav.Link>
 
               <Nav.Link

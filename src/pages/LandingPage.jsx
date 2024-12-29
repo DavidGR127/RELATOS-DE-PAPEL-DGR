@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
-import LandingImg from "../assets/landing-img.png";
+import LandingImg from "../assets/images/landing-img.jpg";
 import useTimer from "../hooks/TimerLanding";
 
 const LandingPage = () => {
@@ -17,46 +17,25 @@ const LandingPage = () => {
   }, [seconds]);
 
   return (
-    <div className="vh-100 d-flex justify-content-center align-items-center text-center text-bg-dark">
-      {/* // Corregir - Esta feo, vaidar si va acá el CSS  */}
+    <div className="bg-white vh-100 d-flex justify-content-center align-items-center text-center text-bg-dark">
       <div>
-        <h2>Aprovecha nuestras promociones</h2>
-        <br></br>
         <Image
           src={LandingImg}
           className="img-fluid rounded"
-          style={{ width: "400px", height: "auto" }}
+          style={{ width: "900px", height: "auto" }}
         />
         <br></br>
-        <Button as={Link} to={"/main/home"} variant="light">
-          Comprar
+        <br></br>
+        <Button as={Link} to={"/main/home"} variant="primary">
+          ¡ Ingresar al sitio !
         </Button>
         <br></br>
-        <Button as={Link} to={"/main/home"} variant="light">
-          Ingresar al sitio web
-        </Button>
         <br></br>
-        <p>Esta ventana se cerrará automáticamente en {seconds}</p>
+        <p className="fw-bold text-dark text-bg-light">
+          Esta ventana se cerrará automáticamente en {seconds}
+        </p>
       </div>
     </div>
   );
 };
 export default LandingPage;
-
-/* 
-const LandingPage = () => {
-    const seconds = useTimer();
-    const navigate = useNavigate();
-  
-    useEffect(() => {
-      if (seconds >= 5) {
-        navigate("/main/home");
-      }
-    }, [seconds]);
-    return (
-      <div>
-        <Button as={Link} to={"/main/home"} variant="light"> Iniciar Menú Principal {seconds}</Button>
-      </div>
-    );
-  };
-  export default LandingPage; */

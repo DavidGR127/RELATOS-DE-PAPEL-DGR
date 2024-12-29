@@ -10,18 +10,3 @@ function Home() {
 }
 
 export default Home;
-
-/* 
-import Container from "react-bootstrap/esm/Container"
-import Header from "../components/Header/Header"
-
-const Home = () => {
-  return (
-    <Container className = "container">
-        <Header />
-    </Container>
-    
-  )
-}
-
-export default Home */

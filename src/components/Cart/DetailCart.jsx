@@ -1,5 +1,5 @@
 import { Table } from "react-bootstrap";
-import CartItem from "./CartItem";
+import CartItem from "./CartItemCard";
 
 const DetailCart = ({
   cartItems,
@@ -22,8 +22,10 @@ const DetailCart = ({
             />
           ))}
           <tr className="align-middle">
-            <td colSpan={2}>Total</td>
-            <td className="text-right">${total}</td>
+            <td className="fs-5 fw-bold" colSpan={2}>
+              Total
+            </td>
+            <td className="fs-4 fw-bold text-right">$ {total}</td>
           </tr>
         </tbody>
       </Table>

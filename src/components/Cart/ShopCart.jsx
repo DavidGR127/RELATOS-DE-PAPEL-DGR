@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Badge from "react-bootstrap/Badge";
-import { BsCart4 } from "react-icons/bs";
+import { BsCartFill } from "react-icons/bs";
 import styles from "./ShopCart.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { addBook, deleteBook } from "../../features/cart/cartSlice";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import DetailCart from "./DetailCart";
+import imageNoProductsCart from "/src/assets/images/no-products-cart.png";
 
 const ShopCart = () => {
   const dispatch = useDispatch();
@@ -43,29 +44,29 @@ const ShopCart = () => {
           <Badge pill className={styles.shopCart_button_badge}>
             <p className={styles.shopCart_button_badge_text}>{amount}</p>
           </Badge>
-          <BsCart4 className={styles.shopCart_button_icon} />
+          <BsCartFill className={styles.shopCart_button_icon} />
         </button>
       </div>
-      <Offcanvas
-        show={show}
-        onHide={handleClose}
-        placement={"end"}
-        backdrop="static"
-      >
-        <Offcanvas.Header closeButton>
+      <Offcanvas show={show} onHide={handleClose} placement={"end"}>
+        <Offcanvas.Header closeButton className={styles.shopCart_title}>
           <Offcanvas.Title>
-            Tu carrito tiene
-            <Badge pill bg="dark" className="mx-2">
-              {amount}
-            </Badge>
-            libros
+            <h4>CARRITO DE COMPRAS</h4>
           </Offcanvas.Title>
         </Offcanvas.Header>
+
         <Offcanvas.Body>
+          <h4 className="text-center">Total de artículos: {amount}</h4>
           {cartItems.length === 0 ? (
             <div className="text-center">
-              <h5>¡Tu Carrito esta Vació!</h5>
-              <p>Agrega una nuevo libro</p>
+              <br />
+              <h3>Tu carrito está vacío.</h3>
+              <br />
+              <img
+                src={imageNoProductsCart}
+                alt=""
+                width="200px"
+                height="200px"
+              />
             </div>
           ) : (
             <>

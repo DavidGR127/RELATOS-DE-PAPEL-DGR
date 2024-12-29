@@ -56,7 +56,7 @@ const Book = ({ book }) => {
       <h5>{book.title}</h5>
       <h6>{book.author}</h6>
 
-      <p>${book.price}</p>
+      <p>$ {book.price}</p>
     </div>
   );
 };

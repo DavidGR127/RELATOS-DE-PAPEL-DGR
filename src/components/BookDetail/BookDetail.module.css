@@ -1,0 +1,37 @@
+.BookDetail {
+  border: 2px solid rgb(64, 85, 124);
+  background-color: #ededed;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 400px;
+  display: center;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.BookDetailImage {
+  display: flex;
+  justify-content: center;
+  width: 340px;
+  margin: 25px;
+}
+
+.BookDetailInfo {
+  flex: 1;
+  margin: 25px;
+}
+
+.BookDetailBuy {
+  color: white;
+  background-color: rgb(24, 155, 187) !important;
+  width: 40%;
+  font-size: large;
+}
+
+.BookDetailBuy:hover {
+  color: wheat;
+  background-color: rgb(12, 53, 96) !important;
+  font-weight: bold;
+}
