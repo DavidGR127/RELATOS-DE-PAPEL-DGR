@@ -1,6 +1,8 @@
+// ..........HOOKS UTILIZADOS....................
 import { useEffect, useState } from "react";
+// ..
 
-const useTimer = () => {
+const useTimerLanding = () => {
   const [seconds, setSeconds] = useState(5);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -10,4 +12,4 @@ const useTimer = () => {
   });
   return seconds;
 };
-export default useTimer;
+export default useTimerLanding;

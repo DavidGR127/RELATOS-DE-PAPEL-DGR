@@ -1,14 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
-import { MdAddShoppingCart } from "react-icons/md";
+// ..........HOOKS UTILIZADOS....................
 import { useDispatch } from "react-redux";
-import styles from "./Books.module.css";
-import { addBook } from "../../features/cart/cartSlice";
+// ..
+import { Link } from "react-router-dom";
+import { MdAddShoppingCart } from "react-icons/md";
 import { BsFillStarFill } from "react-icons/bs";
-/* import { Badge } from "react-bootstrap"; */
+import { addBook } from "../../features/cart/cartSlice";
+import styles from "./Books.module.css";
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleOnClick = () => {
     console.log(book);
@@ -17,12 +17,12 @@ const Book = ({ book }) => {
 
   return (
     <div className={styles.book} style={{ position: "relative" }}>
-      <Link to={`/main/libro/${book.id}`} className={styles.book_link}>
+      <Link to={`/main/libro/${book.id}`} className={styles.book__link}>
         <img
           title={"Clic para ver mas dealles"}
           src={book.images[0]}
           alt={book.title}
-          className={styles.book_img}
+          className={styles.book__Image}
         />
       </Link>
       {book.discount && (
@@ -42,9 +42,9 @@ const Book = ({ book }) => {
         </span>
       )}
       <div>
-        <button className={styles.book_button_add} onClick={handleOnClick}>
+        <button className={styles.book__buttonAdd} onClick={handleOnClick}>
           Agregar al carrito
-          <MdAddShoppingCart size="20px" />
+          <MdAddShoppingCart className="mx-1" />
         </button>
       </div>
       <hr />

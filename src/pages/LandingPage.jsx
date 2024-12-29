@@ -1,13 +1,15 @@
+// ..........HOOKS UTILIZADOS....................
+import useTimerLanding from "../hooks/TimerLanding"; //.....PERSONALIZADO
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
+// ..
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import LandingImg from "../assets/images/landing-img.jpg";
-import useTimer from "../hooks/TimerLanding";
 
 const LandingPage = () => {
-  const seconds = useTimer();
+  const seconds = useTimerLanding();
   const navigate = useNavigate();
 
   useEffect(() => {

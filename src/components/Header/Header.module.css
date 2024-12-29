@@ -6,16 +6,14 @@
   padding-top: 5px;
 }
 
-.homeLink {
-  /* border: 2px solid rgb(157, 21, 194); */
+.header__homeLink {
   width: 20%;
   height: 100px;
   display: flex;
   justify-content: center;
 }
 
-.formSearch {
-  /* border: 2px solid rgb(227, 25, 25); */
+.header__formSearch {
   width: 100%;
   height: 100px;
   display: flex;
@@ -23,46 +21,23 @@
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
-  /* right: 40px; */
-  /* left: 40px; */
-  /* gap: 10px; */
 }
 
-.formSearch_txtSearch {
-  /* border: 1px solid rgb(214, 26, 26); */
+.formSearch__txtSearch {
   border-radius: 20px;
-  /* width: 100%; */
-  /* height: 40px; */
-  /* font-size: 1rem; */
-  /* padding: 10 10px; */
-  /* border-radius: 5px; */
 }
 
-.formSearch_btnSearch {
+.formSearch__btnSearch {
   border: 1px solid white;
   border-radius: 20px;
   background-color: white;
   color: rgb(12, 53, 96);
 }
 
-.helpLink {
-  /*   border: 2px solid rgb(157, 21, 194); */
+.headers_link {
   width: 15%;
   font-size: 1rem;
-  /* font-weight: bold; */
   color: whitesmoke;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.shoppingCart {
-  /* border: 2px solid rgb(157, 21, 194); */
-  width: 15%;
-  font-size: 1rem;
-  /* font-weight: bold; */
-  /* color: rgb(195, 23, 23); */
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -72,135 +47,24 @@
 .navbar {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  /* border: 2px solid rgb(157, 21, 194); */
-  /*   border: 1px solid black; */
-  /* display: justify; */
   width: 100%;
   height: 60px;
-  /* display: flex; */
-  /* justify-content: space; */
-  /* align-items: center; */
-  /* text-align: justify; */
   background-color: rgb(12, 53, 96);
   font-size: large;
   padding: 20px;
-  /* justify-items: legacy; */
   justify-content: space-around;
 }
 
-/* .navbar_toggle {
-  border: 2px solid rgb(221, 12, 12);
-  outline: none;
-  border: none;
-  box-shadow: none;
-  background-color: rgb(95, 183, 37);
-}
-.navbar_toggle:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
-  background-color: whitesmoke;
-} */
-
-/* .navbar_nav {
-  display: flex;
-  color: rgb(255, 0, 72);
-  text-align: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  line-height: 60px;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  justify-content: start;
-  justify-items: start;
-  align-items: center;
-  border: 1px solid green;
-} */
-
-.navbar_nav_link {
+.navbar__navlink {
   color: white;
-  /* background-color: rgb(12, 53, 96); */
-  /* flex-direction: row; */
   line-height: 20px;
   text-align: center;
   margin: 10px;
   padding-left: 30px;
-  /* border: 1px solid rgb(229, 126, 17); */
 }
 
-.navbar_nav_link:hover {
+.navbar__navlink:hover {
   color: wheat;
   background-color: rgb(7, 33, 60);
   border-radius: 10px;
 }
-/* .navbar_nav_hr {
-  display: block;
-  top: 0;
-  border: 3px solid orange;
-} */
-
-/* @media screen and (max-width: 990px) {
-  .header {
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    height: auto;
-    justify-content: space-between;
-    text-align: center;
-    justify-content: center;
-  }
-  .formSearch {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
-    right: 0px;
-  }
-
-  .homeLink {
-    display: block;
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgb(128, 128, 128);
-    cursor: pointer;
-  }
-
-  /*   .navbar_nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    line-height: 60px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #333;
-  
-
-  .navbar_nav_link {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    line-height: 60px;
-    text-align: center;
-    background-color: rgb(51, 0, 255);
-    color: aqua;
-  }
-}
- */

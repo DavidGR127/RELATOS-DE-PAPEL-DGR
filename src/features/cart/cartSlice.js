@@ -17,9 +17,6 @@ export const cartSlice = createSlice({
         )[0];
         newProduct.amount += 1;
         newProduct.total = newProduct.amount * newProduct.price;
-        //console.log(newProduct);
-        //state.cartItems = [...state.cartItems, newProduct];
-
         state.cartItems.map((book) =>
           book.id === newProduct.id ? newProduct : book
         );

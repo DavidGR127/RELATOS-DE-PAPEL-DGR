@@ -1,19 +1,14 @@
 import { Table } from "react-bootstrap";
-import CartItem from "./CartItemCard";
+import CartItemCard from "./CartItemCard";
 
-const DetailCart = ({
-  cartItems,
-  total,
-  cantidad,
-  removeFromCart,
-  addFromCart,
-}) => {
+const DetailCart = ({ cartItems, total, removeFromCart, addFromCart }) => {
   return (
     <>
+      {/*.......CUERPO CON DETALLE DE CADA ITEM PARA EL CARRITO DE COMRPAS................ */}
       <Table responsive>
         <tbody>
           {cartItems.map((item) => (
-            <CartItem
+            <CartItemCard
               key={item.id}
               item={item}
               cartItem={item}

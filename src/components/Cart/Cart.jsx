@@ -1,16 +1,21 @@
+// ..........HOOKS UTILIZADOS....................
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// ..
+
 import React, { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Badge from "react-bootstrap/Badge";
 import { BsCartFill } from "react-icons/bs";
-import styles from "./ShopCart.module.css";
-import { useSelector, useDispatch } from "react-redux";
+import styles from "./Cart.module.css";
+
 import { addBook, deleteBook } from "../../features/cart/cartSlice";
-import { useEffect } from "react";
+
 import { Link } from "react-router-dom";
-import DetailCart from "./DetailCart";
+import DetailCart from "./CartDetail";
 import imageNoProductsCart from "/src/assets/images/no-products-cart.png";
 
-const ShopCart = () => {
+const Cart = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
   const [show, setShow] = useState(false);
@@ -39,21 +44,23 @@ const ShopCart = () => {
 
   return (
     <>
+      {/*..................ICONO Y BOTON DE CARRITO DE COMPRAS................ */}
       <div className={styles.shopCart}>
-        <button onClick={toggleShow} className={styles.shopCart_button}>
-          <Badge pill className={styles.shopCart_button_badge}>
-            <p className={styles.shopCart_button_badge_text}>{amount}</p>
+        <button onClick={toggleShow} className={styles.shopCart__button}>
+          <Badge pill className={styles.button__badge}>
+            <p className={styles.badge__text}>{amount}</p>
           </Badge>
-          <BsCartFill className={styles.shopCart_button_icon} />
+          <BsCartFill className={styles.button__icon} />
         </button>
       </div>
+
+      {/*............OFFCANVAS UTILIZADO PARA VISUALIZAR EL CARRITO........... */}
       <Offcanvas show={show} onHide={handleClose} placement={"end"}>
-        <Offcanvas.Header closeButton className={styles.shopCart_title}>
+        <Offcanvas.Header closeButton className={styles.shopCart__title}>
           <Offcanvas.Title>
             <h4>CARRITO DE COMPRAS</h4>
           </Offcanvas.Title>
         </Offcanvas.Header>
-
         <Offcanvas.Body>
           <h4 className="text-center">Total de artículos: {amount}</h4>
           {cartItems.length === 0 ? (
@@ -77,15 +84,16 @@ const ShopCart = () => {
                 removeFromCart={removeFromCart}
                 addFromCart={addFromCart}
               />
+              {/*............LINK Y BOTON PARA LLEVAR A CHECKOUT ........... */}
               <Link
                 style={{ textDecoration: "none", color: "white" }}
                 to="/main/checkout"
               >
                 <button
-                  className={styles.shopCart_Button_buy}
+                  className={styles.shopCart_buyButton}
                   onClick={toggleShow}
                 >
-                  Comprar
+                  Proceder con el pago
                 </button>
               </Link>
             </>
@@ -96,18 +104,4 @@ const ShopCart = () => {
   );
 };
 
-// const mapStateToProps = (state) => {
-//   return {
-//     cartItems: state.cart.items,
-//     total: state.cart.total,
-//   };
-// };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     removeFromCart: (item) => dispatch(removeFromCart(item)),
-//     addToCart: (item) => dispatch(addToCart(item)),
-//   };
-// };
-
-export default ShopCart;
+export default Cart;

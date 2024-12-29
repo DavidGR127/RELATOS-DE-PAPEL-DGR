@@ -1,10 +1,8 @@
-/* ventana emergente para carrito */
-
 import React from "react";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 
-const CartItem = ({ item, addFromCart, removeFromCart }) => {
+const CartItemCard = ({ item, addFromCart, removeFromCart }) => {
   return (
     <tr key={item.id} className="align-middle">
       {/*.....................BOTONES AUMENTAR O REDUCIR LA CANTIDAD................. */}
@@ -47,4 +45,4 @@ const CartItem = ({ item, addFromCart, removeFromCart }) => {
   );
 };
 
-export default CartItem;
+export default CartItemCard;

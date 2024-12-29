@@ -1,67 +1,36 @@
 .book {
-/*     background-color: rgb(222, 41, 17); */
-    /* border: 1px solid rgb(12, 53, 96); */
-    display: flex;
-    text-align: center;
-    padding: 10px;
-    width: 300px;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .book_img {
-    cursor: pointer;
-    width: auto;
-    height: 280px;
-    padding-bottom: 15px;
-  }
-  
-  .book_link {
-    text-decoration: none;
-    color: rgb(128, 128, 128);
-  }
-  
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .book_button_add {
-    /* padding: 2px; */
-    width: 180px;
-    height: 35px;
-    /* border: 1px solid gray; */
-    border-radius: 20px;
-    background-color: rgb(24, 155, 187);
-    color: whitesmoke;
-    font-size: 16px;
-  }
-  
-  .book_button_add:hover {
-    background-color: rgb(12, 53, 96);
-    color: wheat;
-    transition: all 0.3s ease-in;
-  }
-  
+.book__link {
+  text-decoration: none;
+  color: rgb(128, 128, 128);
+}
 
-  
-  /*   .book_buttons {
-    display: flex;
-    justify-content:space-around;
-    gap: 2px;
-  } */
-  
-/*   .book_button_add {
-    width: 60px;
-    height: 50px;
-    border-radius: 5px;
-    background-color: white;
+.book__Image {
+  cursor: pointer;
+  width: auto;
+  height: 280px;
+  padding-bottom: 15px;
+}
 
-  }
-  .book_button_add_icon {
-    color: rgb(81, 89, 96);
-    font-size: 30px;
-  }
+.book__buttonAdd {
+  width: 180px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: rgb(24, 155, 187);
+  color: whitesmoke;
+  font-size: 16px;
+}
 
-
-  .book_button_add_icon:hover {
-    color: rgb(20, 97, 164);
-    font-size: 30px;
-  } */
+.book__buttonAdd:hover {
+  background-color: rgb(12, 53, 96);
+  color: wheat;
+  transition: all 0.3s ease-in;
+}
